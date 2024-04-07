@@ -1,0 +1,436 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000; /* Light gray background */
+  transition: background-color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul li:hover {
+  /* Remove background color change on hover */
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+header nav ul li a {
+  color: #ffffff; /* Change color of links in the header to black */
+}
+
+header nav ul li {
+  border-color: #ffffff !important; /* Change border color of the oval around the text to black */
+}
+
+nav ul li:hover a {
+  color: #000000; /* Change text color on hover */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+  margin: 0 10px;
+  border-radius: 20px; /* Adjust the value to change the oval shape */
+  border: 2px solid #fff; /* White border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  position: relative; /* Add relative positioning */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative; /* Add relative positioning */
+  z-index: 1; /* Set a higher z-index value */
+}
+
+section {
+  height: 100vh;
+  padding: 50px 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Text color for all sections */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color:  rgb(255, 255, 255); /* Change the color to black */
+  margin: 0; /* Remove default margin */
+  height: 100%; /* Ensure the height takes up the full section height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000; /* White border around text */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer .contact-info a {
+  color: #fff; /* Change the color to white */
+  text-decoration: none; /* Remove underline */
+  margin-right: 10px; /* Add some spacing between the links */
+}
+
+/* Add hover effect for each section */
+section h2:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+  text-decoration: underline;
+}
+
+/* Add typing animation for the title */
+#title {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid white; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+#title-container {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Centers the div horizontally */
+  letter-spacing: .15em; /* Adjust as needed */
+}
+
+#title-container::after {
+  content: '|';
+  display: inline-block;
+  width: 0; /* Initially hidden */
+  animation: blink-caret 0.75s step-end infinite, typing 3.5s steps(40, end) forwards;
+}  
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
+}
+
+/* Button styles */
+#mode-toggle {
+  background-color: #888888;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#mode-toggle:hover {
+  background-color: #666666;
+}
+
+/* Button styles */
+#mode-toggle {
+  background-color: #666666;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed; /* Position the button */
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  z-index: 999; /* Ensure it's above other elements */
+  transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+}
+
+#mode-toggle:hover {
+  background-color: #666666;
+}
+
+#mode-toggle:active {
+  transform: scale(0.95); /* Scale down slightly when clicked */
+}
+
+.dark-mode section h2 {
+  color: #fff; /* Text color for section headings in dark mode */
+}
+
+/* Add background images for each section */
+
+#accommodation {
+  background-image: url('https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?cs=srgb&dl=pexels-pixabay-261102.jpg&fm=jpg'); /* Replace 'accommodation-bg.jpg' with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}
+
+/* Apply similar styles to other sections as needed */
+#Restaurants {
+  background-image: url('https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?cs=srgb&dl=pexels-chan-walrus-941861.jpg&fm=jpg'); /* Replace 'food-bg.jpg' with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#places-to-visit {
+  background-image: url('https://cdn.pixabay.com/photo/2016/11/29/07/59/architecture-1868265_1280.jpg'); /* Replace 'places-to-visit-bg.jpg' with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#help {
+  background-image: url('https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg'); /* Replace 'help-bg.jpg' with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Styles for the sub-sections */
+
+/* Styles for the sub-sections */
+/* Styles for the sub-sections */
+#subsection-container {
+  display: none; /* Initially hide the subsection container */
+  justify-content: center;
+  align-items: center;
+}
+
+.subsection {
+  width: 70%; /* Adjust the width as needed */
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(23, 23, 23, 0.778); /* Adjust the transparency as needed */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.subsection h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .subsection {
+    width: 100%; /* Display the subsections in a single column on smaller screens */
+  }
+}
+
+.subsection h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .subsection {
+    width: 100%; /* Display the subsections in a single column on smaller screens */
+  }
+}
+
+.subsection h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .subsection {
+    width: 100%; /* Display the subsections in a single column on smaller screens */
+  }
+}
+/*   ----    inside the container     ---- */
+
+.subsection {
+  width: 100%; /* Set the width to 100% */
+}
+
+.subsection h3 {
+  display: inline; /* Display the heading inline */
+  font-weight: bold; /* Make the heading bold */
+}
+
+.subsection p {
+  text-align: left; /* Align paragraphs to the left */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#title {
+  margin-left: 20px; /* Adjust margin as needed */
+}
+
+nav {
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px; /* Adjust margin as needed */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Change display to flex */
+  justify-content: flex-start; /* Align items to the left */
+  margin-left: 20px; /* Adjust margin to move the list items closer to the heading */
+}
+
+nav ul li {
+  margin-right: 1px; /* Adjust margin between list items */
+}
+
+.subsection-container {
+  display: none;
+}
+
+.subsection-container.show {
+  display: block;
+}
+#restaurants {
+  background-image: url('https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?cs=srgb&dl=pexels-chan-walrus-941861.jpg&fm=jpg'); /* Replace 'restaurants-bg.jpg' with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#restaurants .subsection-container {
+  display: block; /* Initially show the subsection container */
+}
+
+#restaurants .subsection {
+  width: 70%; /* Adjust the width as needed */
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(23, 23, 23, 0.778); /* Adjust the transparency as needed */
+  border-radius: 10px;
+  text-align: center;
+}
+
+#restaurants .subsection h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  #restaurants .subsection {
+    width: 100%; /* Display the subsections in a single column on smaller screens */
+  }
+}
+
+#restaurants .subsection h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  #restaurants .subsection {
+    width: 100%; /* Display the subsections in a single column on smaller screens */
+  }
+}
+
+#restaurants .subsection h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  #restaurants .subsection {
+    width: 100%; /* Display the subsections in a single column on smaller screens */
+  }
+}
+
+#restaurants-subsection-container {
+  display: none; /* Hide the subsection container initially */
+}
+
+/* Ensure similar styling for the subsection container and subsection */
+#places-subsection-container {
+  display: none; /* Initially hide the subsection container */
+}
+
+#places-subsection-container.show {
+  display: block;
+}
+
+#places .subsection {
+  width: 70%; /* Adjust the width as needed */
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(23, 23, 23, 0.778); /* Adjust the transparency as needed */
+  border-radius: 10px;
+  text-align: center;
+}
+
+#places .subsection h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  #places .subsection {
+    width: 100%; /* Display the subsections in a single column on smaller screens */
+  }
+}
+
+#places .subsection h3 {
+  margin-top: 0;
+}
+
+/* help sub section */
+
+#help-subsection-container {
+  display: none; /* Initially hide the subsection container */
+}
+
+#help-subsection-container.show {
+  display: block;
+}
+
+#help .subsection {
+  width: 70%; /* Adjust the width as needed */
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(23, 23, 23, 0.778); /* Adjust the transparency as needed */
+  border-radius: 10px;
+  text-align: center;
+}
+
+#help .subsection h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  #help .subsection {
+    width: 100%; /* Display the subsections in a single column on smaller screens */
+  }
+}
+
+#help .subsection h3 {
+  margin-top: 0;
+}
